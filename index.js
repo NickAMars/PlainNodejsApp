@@ -7,6 +7,11 @@ const 	http 					= require('http'),
 				helpers 			= require('./lib/helpers'),
 			  StringDecoder = require('string_decoder').StringDecoder;
 
+// twilio number +14242928785
+helpers.sendTwilioSms('', 'Hello', function (err) {
+	console.log('this was the err', err);
+});
+
 //Create Server
 const httpServer = http.createServer((req, res) =>{
  unifidedServer(req,res);
